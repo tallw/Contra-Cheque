@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">	
+		<title>CADASTRAR SENHA ECOSPB</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../fotos/icon.png" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<script src="funcoes.js" type="text/javascript"></script>
+	</head>
+
+	<script type="text/javascript">
+
+		function validateForm() {
+    		var x = document.forms["cpf"]["cpf"].value;
+    		if (x == "") {
+        		alert("Preencher o Campo");
+        		return false;
+    		}
+		}
+
+	</script>
+
+	<body style="background-image:  url('../images/background.jpg');">
+	
+
+		<div id="demo">
+			<center><legend style="color: white"><h1><b>CADASTRAR USU&Aacute;RIO</b></h1></legend></center>
+		</div>
+
+		<br/>	
+		<form id="formulario" method="post" action="action.php" name="formulario">
+
+			<input type="hidden" id="action" name="action" />
+ 				
+			<center><input type="text" id="cpf" name="cpf" onsubmit="return validateForm()" maxlength="11" placeholder="Infome o seu CPF:" style="width: 300px;"> *</center><br/>
+			<center><input type="text" id="email" name="email" onsubmit="return validateForm()" maxlength="100" placeholder="Infome um E-mail para recuperação de senha:" style="width: 300px;"> _</center><br/>
+			<center><input type="password"  id="senha" name="senha" placeholder="Infome a sua Senha:" style="width: 300px;"> *</center><br/>
+
+			<center><input type="button" value="CADASTRAR" onclick="javascript:doPost('formulario', 'cadastrar');"></center><br/><br/>
+			
+		</form>
+
+			<center><input type="button" value="VOLTAR" onclick="window.history.back();"></center>	
+
+	</body>
+</html>
